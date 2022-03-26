@@ -3,33 +3,37 @@ import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 import paginationFactory from "react-bootstrap-table2-paginator";
 import BootstrapTable from "react-bootstrap-table-next";
 
-function TableOrder(pops) {
+function TableCar() {
   const indexArr = Array.from(Array(100).keys());
   console.log(indexArr);
   const nos = indexArr;
   const carsData = nos.map((no, index) => {
     return {
       no: no,
-      userEmail: "User Email",
+      name: "Name",
+      category: "Category",
+      price: "Price",
       startRent: "Start Rent",
       finishRent: "Finish Rent",
-      price: "Price",
-      status: "Status",
+      createdAt: "Created At",
+      updatedAt: "Updated At",
     };
   });
 
   const columns = [
     { dataField: "no", text: "No" },
-    { dataField: "userEmail", text: "User Email" },
-    { dataField: "startRent", text: "StartRent" },
-    { dataField: "finishRent", text: "Finish Rent" },
+    { dataField: "name", text: "Name" },
+    { dataField: "category", text: "Category" },
     { dataField: "price", text: "Price" },
-    { dataField: "status", text: "Status" },
+    { dataField: "startRent", text: "Start Rent" },
+    { dataField: "finishRent", text: "Finish Rent" },
+    { dataField: "createdAt", text: "Created At" },
+    { dataField: "updatedAt", text: "Updated At" },
   ];
 
   return (
     <div>
-      <h6>List Order</h6>
+      <h6>List Car</h6>
       <BootstrapTable
         keyField="id"
         data={carsData}
@@ -40,4 +44,4 @@ function TableOrder(pops) {
   );
 }
 
-export default TableOrder;
+export default TableCar;

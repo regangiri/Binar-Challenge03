@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import cardImage from "../assets/card-image.png";
-
+import Rendermodal from "../components/Rendermodal";
 function Carcard() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <Card className="mx-5 my-2" style={{ width: "23rem" }}>
         <Card.Img variant="top" src={cardImage} />
+        {showModal ? <Rendermodal /> : null}
+        {/* <Rendermodal /> */}
         <Card.Body>
           <Card.Title>Nama/Tipe Mobil</Card.Title>
           <Card.Text>
@@ -20,6 +24,7 @@ function Carcard() {
             <Button
               className="w-50"
               variant="transparant border-2 border-danger text-danger"
+              onClick={() => setShowModal(!showModal)}
             >
               <i class="fa fa-fw fa-trash"></i>
               Delete
