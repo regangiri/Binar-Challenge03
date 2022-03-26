@@ -1,5 +1,6 @@
 import Button from "@restart/ui/esm/Button";
 import React from "react";
+import userIcon from "../assets/user-icon.svg";
 import {
   Container,
   Form,
@@ -36,7 +37,10 @@ function Header() {
             </Form>
             {/* <Navbar.Collapse className="justify-content-end"> */}
             <Navbar.Text>
-              Signed in as: <a href="#login">Mark Otto</a>
+              <img className="mx-2" src={userIcon} alt="" />
+              <a className="mx-2" href="">
+                Unis Badri{" "}
+              </a>
             </Navbar.Text>
             {/* </Navbar.Collapse> */}
           </Navbar.Collapse>
