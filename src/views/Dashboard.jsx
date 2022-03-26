@@ -8,6 +8,7 @@ function Dashboard() {
     <div>
       <Sidebar />
       <div className="margin-listorder">
+        <p>dashboard</p>
         <ListOrder />
       </div>
     </div>

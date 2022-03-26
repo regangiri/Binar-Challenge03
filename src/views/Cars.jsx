@@ -9,6 +9,7 @@ function Cars() {
     <div>
       <Sidebar />
       <div className="margin-listorder ">
+        <p>cars {">"} listcar</p>
         <Addnewcardbutton />
         <Rendercard />
       </div>
